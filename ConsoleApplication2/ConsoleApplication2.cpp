@@ -51,6 +51,12 @@ int main()
 {
     kVozilo oGolf("Golf", 160, "crvena");//objekat oGolf klase kVozilo
     kVozilo oZastava("Zastava", 120, "bela");//objekat oZastava klase kVozilo
+
+    oGolf.fKojaKola();//poziv funkcije fKojaKola objekta oGolf
+    oZastava.fKojaKola();//poziv funkcije fKojaKola objekta oZastava
+
+    cout << endl;
+    return 0;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
