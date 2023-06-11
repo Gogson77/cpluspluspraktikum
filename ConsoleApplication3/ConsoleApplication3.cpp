@@ -12,7 +12,11 @@ public:
     char pNaziv[15];
     double pCena;
 
-    kArtikal(char pSi[10], char pNa[15], double pCe);
+    kArtikal(
+        char pSi[10], 
+        char pNa[15], 
+        double pCe
+    );//konstruktor
 
     int fKojiArtikal();
 
@@ -20,16 +24,22 @@ public:
 };
 
 //definicija konstruktora
-kArtikal::kArtikal(char pSi[10], char pNa[15], double pCe) 
-{
+kArtikal::kArtikal(
+    char pSi[10], 
+    char pNa[15], 
+    double pCe
+    )
+    {
     strcpy(pSifra, pSi);
     strcpy(pNaziv, pNa);
     pCena = pCe;
 };
 
 //definicija funkcije fKojiArtikal
-int kArtikal::fKojiArtikal() {
-    cout << "Ovo je artikal " << pNaziv << ", sifra mu je " << pSifra << " i kosta " << pCena << " dinara." << endl;
+int kArtikal::fKojiArtikal() 
+{
+    cout << "Ovo je artikal " << pNaziv << ", sifra mu je " << pSifra << " i kosta ";
+    cout << pCena << " dinara." << endl;
     return 0;
 };
 
@@ -41,22 +51,11 @@ kArtikal::~kArtikal()
 
 int main()
 {
-    kArtikal oCokolada("A123456789","Cokolada",0.50);//definicija objekta oCokolada klase kArtikal
-    kArtikal oKola("B987654321","Kola", 1.55);//definicija objekta oKola klase kArtikal
+    kArtikal oCokolada("123456789", "Cokolada", 0.50);//definicija objekta oCokolada klase kArtikal
+    kArtikal oKola("987654321", "Kola", 1.55);//definicija objekta oKola klase kArtikal
 
     oCokolada.fKojiArtikal();
     oKola.fKojiArtikal();
 
     return 0;
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
