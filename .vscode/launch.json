@@ -1,5 +1,6 @@
 {
     "configurations": [
+        
         {
             "name": "C/C++: cl.exe build and debug active file",
             "type": "cppvsdbg",
