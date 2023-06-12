@@ -1,21 +1,17 @@
 #include <iostream>
-#include <string.h>
+#include "Otac.h"
+
 using namespace std;
 
-class kOtac
+int main()
 {
-    public:
-    char pIme[30];
-    int pGod;
+	Otac moj;// poziva se konstruktor kOtac( )
+	Otac njegov(45);// poziva se konstruktor kOtac (int)
+	Otac tvoj(30, "Laza");// poziva se konstruktor kOtac (int, char)
+	Otac vas("Mika", 25);// poziva se konstruktor kOtac (char, int)
 
-    kOtac( char pIme[30], int pGod ){ pIme="Petar"; };
-
-    kOtac(m){};
-    kOtac(int,char){};
-    kOtac(char,int){};
-}
-
-
-int main(){
- cout << "Hello World!" << endl;
+	cout << moj.ime << " " << moj.god << endl; //Petar, 50
+	cout << njegov.god << endl; //45
+	cout << tvoj.ime << " " << tvoj.god << endl; //Laza 30
+	cout << vas.ime << " " << vas.god << endl; //Mika 25
 }
