@@ -14,4 +14,6 @@ int main()
 	cout << njegov.god << endl; //45
 	cout << tvoj.ime << " " << tvoj.god << endl; //Laza 30
 	cout << vas.ime << " " << vas.god << endl; //Mika 25
+
+	return 0;
 }

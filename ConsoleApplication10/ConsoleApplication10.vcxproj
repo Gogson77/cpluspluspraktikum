@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{f2e98d2c-e44b-42f6-ad10-8f84b22d3498}</ProjectGuid>
-    <RootNamespace>ConsoleApplication9</RootNamespace>
+    <ProjectGuid>{22dfaf31-4980-44f1-8010-59b1177cba34}</ProjectGuid>
+    <RootNamespace>ConsoleApplication10</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,11 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="ConsoleApplication9.cpp" />
-    <ClCompile Include="Index.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Index.h" />
+    <ClCompile Include="ConsoleApplication10.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
