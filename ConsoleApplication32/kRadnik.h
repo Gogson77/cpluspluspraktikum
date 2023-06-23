@@ -12,7 +12,8 @@ public:
     int pGodStaza;
     float pBrojSati;
     int pPlata;
-    kRadnik(char pP[20], char pI[15], float pK, int pGS, float BS);
+    kRadnik(char pP[20], char pI[15], 
+        float pK, int pGS, float BS);
     int fPlata();
     int fIsplata();
     ~kRadnik();
