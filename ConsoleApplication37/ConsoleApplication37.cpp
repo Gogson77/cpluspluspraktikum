@@ -1,32 +1,26 @@
 #include <iostream>
+#include <iomanip>
 #include <string>
+
 using namespace std;
 
 class kKopirnica {
 public:
-    struct sAdresa {
+    string pNaziv;
+    struct {
         string pUlica;
         int pBroj;
         string pMjesto;
     } pAdresa;
-
-    struct sCijena {
+    struct {
         double pMax;
         double pMin;
     } pCijena;
 
-    string pNaziv;
-    int pStrana;
-    int pVrsta;
-    double iznos;
 
-    kKopirnica(
-        string naziv, 
-        string ulica, 
-        int broj, 
-        string mjesto,
-        double maxCijena, 
-        double minCijena) {
+    int pStrana, pVrsta;
+
+    kKopirnica(string naziv, string ulica,int broj, string mjesto,double maxCijena, double minCijena) {
         pNaziv = naziv;
         pAdresa.pUlica = ulica;
         pAdresa.pBroj = broj;
@@ -35,17 +29,17 @@ public:
         pCijena.pMin = minCijena;
     };
 
-    void fIzracunajCijenu() {
-        if (pStrana >= 1000 && pVrsta == 1) {
-            iznos = pCijena.pMax * pStrana;
-        }
-        else if (pStrana > 1000 && pVrsta == 2) {
-            iznos = pCijena.pMin * pStrana;
-        }
+    double fIzracunajCijenu() {
+        if (pVrsta == 1 || pStrana <= 1000) {
+            return pCijena.pMax * pStrana;
+        } else if (pVrsta == 2 || pStrana > 1000) {
+            return pCijena.pMin * pStrana;
+        } 
     };
 
-    void fPisiCijenu() { 
-        cout << "Iznos: " << iznos << endl << endl; };
+    void fPisiCijenu() {
+        cout << "Cijena kopiranja u kopirnici " << pNaziv << ": " << fixed << setprecision(2) << fIzracunajCijenu() << endl << endl;
+    };
 
     ~kKopirnica() { cout << "Zavrsetak rada koprinice." << endl; };
 };
@@ -53,12 +47,12 @@ public:
 
 int main()
 {
-    kKopirnica oJeftina("Antika", "Studenska", 22, "Beograd", 2.00, 0.60);
+kKopirnica oJeftina("Antika", "Studenska", 22, "Beograd", 2.00, 0.60);
 
     cout << "Kopirnica: " << oJeftina.pNaziv << endl;
     cout << "Adresa: " << oJeftina.pAdresa.pUlica << " " << oJeftina.pAdresa.pBroj << ", " << oJeftina.pAdresa.pMjesto << endl;
 
-    cout << "Unesi broj strana: "; 
+    cout << "Unesi broj strana: ";
     cin >> oJeftina.pStrana;
     cout << "Unesi jednostranu= 1 ili dvostranu= 2 vrstu stampanja: ";
     cin >> oJeftina.pVrsta;
@@ -78,7 +72,7 @@ int main()
 
     oSkupa.fIzracunajCijenu();
     oSkupa.fPisiCijenu();
-    
+
 
     return 0;
 }
