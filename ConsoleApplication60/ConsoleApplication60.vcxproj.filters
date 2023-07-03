@@ -18,5 +18,13 @@
     <ClCompile Include="ConsoleApplication60.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="klasa.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="klasa.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
