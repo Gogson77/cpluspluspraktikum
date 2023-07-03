@@ -2,12 +2,10 @@
 #include <iostream>
 using namespace std;
 
-int main()
+void main()
 {
 	klasa oMoji;
 	oMoji.fUpis();
 	oMoji.fIspis();
-	oMoji.fStarost();
-
-	return 0;
+	cout << "\nSada imam " << oMoji.fStarost() << " godina" << endl;
 }
