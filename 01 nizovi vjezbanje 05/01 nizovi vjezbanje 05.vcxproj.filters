@@ -15,16 +15,8 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="01 Nizovi 01.cpp">
+    <ClCompile Include="01 nizovi vjezbanje 05.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="funkcije.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="funkcije.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>
