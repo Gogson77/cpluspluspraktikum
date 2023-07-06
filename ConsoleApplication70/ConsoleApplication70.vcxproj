@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{6167b615-c124-4a54-a203-c8275c3dd013}</ProjectGuid>
-    <RootNamespace>ConsoleApplication69</RootNamespace>
+    <ProjectGuid>{cacb45bb-423b-4bf7-910e-df4a277c1d36}</ProjectGuid>
+    <RootNamespace>ConsoleApplication70</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,11 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="ConsoleApplication69.cpp" />
-    <ClCompile Include="knjiga.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="knjiga.h" />
+    <ClCompile Include="ConsoleApplication70.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
