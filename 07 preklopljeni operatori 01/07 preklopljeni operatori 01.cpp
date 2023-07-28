@@ -1,4 +1,4 @@
-﻿#include "kStedisa.h"
+#include "kStedisa.h"
 #include <iostream>
 
 using namespace std;
@@ -13,7 +13,7 @@ int main()
     cin >> n;
     cout << endl;
 
-    kStedisa* pokNizK = new kStedisa[n]; 
+    kStedisa* pokNizK = new kStedisa[n];
 
     for (int i = 0; i < n; i++) {
         pokNizK[i].fUpis();
@@ -39,18 +39,20 @@ int main()
             izbor = 0;
             break;
         case 1:
-            cout << "Unesite iznos uplate na sve racune: ";
-            cin >> iznos;
             for (int i = 0; i < n; i++) {
-                (pokNizK[i].*pokFUplata)(iznos);
+                cout << "Unesite iznos uplate na racun pod rednim brojem " << i+1 << ": ";
+                cin >> iznos;
+                pokNizK[i].pStanje += iznos;
+                //(pokNizK[i].*pokFUplata)(iznos);
             }
             cout << endl;
             break;
         case 2:
-            cout << "Unesite iznos isplate sa svih racuna: ";
-            cin >> iznos;
             for (int i = 0; i < n; i++) {
-                (pokNizK[i].*pokFIsplata)(iznos);
+                cout << "Unesite iznos isplate sa racuna pod rednim brojem " << i+1 << ": ";
+                cin >> iznos;
+                pokNizK[i].pStanje -= iznos;
+                //(pokNizK[i].*pokFIsplata)(iznos);
             }
             cout << endl;
             break;

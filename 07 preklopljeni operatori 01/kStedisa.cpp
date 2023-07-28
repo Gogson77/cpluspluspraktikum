@@ -1,4 +1,4 @@
-﻿#include "kStedisa.h"
+#include "kStedisa.h"
 #include <iostream>
 #include <iomanip>
 
@@ -25,19 +25,43 @@ void kStedisa::fUpis() {
 }
 
 void kStedisa::fUplata(double iznos) {
-	pStanje += iznos;
+	(*this).pStanje += abs(iznos); 
 }
 
 void kStedisa::fIsplata(double iznos) {
-	if (iznos > pStanje)
-	{
+	if (iznos > pStanje) {
 		cout << "Nemate dovoljno novca na racunu za trazenu isplatu.\n\n";
-	}
-	else
-	{
-		pStanje -= abs(iznos);
+	} else {
+		(*this).pStanje -= abs(iznos);
 	}
 }
+
+kStedisa kStedisa::operator++() {
+	++pStanje;
+	return *this;
+}
+
+kStedisa kStedisa::operator--() {
+	--pStanje;
+	return *this;
+}
+
+inline kStedisa& kStedisa :: operator += (kStedisa pom) {
+	pStanje += pom.pStanje;
+	return *this;
+};		// a += b
+
+
+inline kStedisa& kStedisa :: operator -= (kStedisa pom) {
+	pStanje -= pom.pStanje;
+	return *this;
+};		// a -= b
+
+kStedisa operator + (kStedisa prvi, kStedisa drugi) {
+	kStedisa zbir;
+	zbir.pStanje = prvi.pStanje + drugi.pStanje;
+	return zbir;
+};  // c = a + b
 
 void kStedisa::fListaj() {
 	cout << pRedniBroj << "\t\t" << pIme << "\t\t" << pStedRacun << "\t\t" << pStanje << "\n";
