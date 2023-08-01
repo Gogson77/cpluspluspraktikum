@@ -15,16 +15,8 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="08 nasledjivanje i pokazivaci vjezbanje 01.cpp">
+    <ClCompile Include="09 visestruko nasledjivanje vjezbanje 02.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="klase.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="klase.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>

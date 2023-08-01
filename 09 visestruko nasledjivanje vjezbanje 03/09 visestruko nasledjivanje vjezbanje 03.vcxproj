@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{f31cf4ac-10c5-4445-bc91-eb5efd7bd4d5}</ProjectGuid>
-    <RootNamespace>My08nasledjivanjeipokazivacivjezbanje01</RootNamespace>
+    <ProjectGuid>{0a82d704-28ec-4b6f-b160-4453f5991308}</ProjectGuid>
+    <RootNamespace>My09visestrukonasledjivanjevjezbanje03</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,11 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="08 nasledjivanje i pokazivaci vjezbanje 01.cpp" />
-    <ClCompile Include="klase.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="klase.h" />
+    <ClCompile Include="09 visestruko nasledjivanje vjezbanje 03.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

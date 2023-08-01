@@ -15,15 +15,27 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="08 nasledjivanje i pokazivaci vjezbanje 01.cpp">
+    <ClCompile Include="09 Visestruko nasledjivanje vjezbanje 04.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="klase.cpp">
+    <ClCompile Include="proizvodjac.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="lekovi.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="izvedene.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="klase.h">
+    <ClInclude Include="proizvodjac.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="lekovi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="izvedene.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
