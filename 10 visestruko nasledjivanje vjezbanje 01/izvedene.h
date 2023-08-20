@@ -8,14 +8,14 @@ class iTableta :public kLekovi, public kProizvodjac
 	float pKoliko;		// po koliko tableta se pije
 	int pDoziranje;	// koliko puta na dan
 public:
-	iTableta() {}
+	iTableta() {};
 	void fUpisivanje();
 	void fIspisivanje() const;
 	int fDohvatiKomada() const { return pKomada; }
 	float fDohvatiKoliko() const { return pKoliko; }
 	int fDohvatiDoz() const { return pDoziranje; }
 	int fKupovina(int pDana);
-	~iTableta() {}
+	~iTableta() {};
 };
 
 class iSirup : public kLekovi, public kProizvodjac
@@ -24,14 +24,14 @@ class iSirup : public kLekovi, public kProizvodjac
 	float pKolicinaDoz;		// kolicina koja se pije
 	int pDoziranje;		// koliko puta na dan
 public:
-	iSirup() {}
+	iSirup() {};
 	void fUpisivanje();
 	void fIspisivanje() const;
 	int fDohvatiKolicinuFlas() const { return pKolicinaFlas; }
 	float fDohvatiKolicinuDoz() const { return pKolicinaDoz; }
 	int fDohvatiDoz() const { return pDoziranje; }
 	int fKupovina(int pDana);
-	~iSirup() {}
+	~iSirup() {};
 };
 
 class iInjekcije : public kLekovi, public kProizvodjac
@@ -40,12 +40,12 @@ class iInjekcije : public kLekovi, public kProizvodjac
 	float pKolicinaAmp;		// zapremina ampule
 	int pDoziranje;		// koliko puta na dan
 public:
-	iInjekcije() {}
+	iInjekcije() {};
 	void fUpisivanje();
 	void fIspisivanje() const;
 	int fDohvatiKolicinuPak() const { return pKolicinaPak; }
 	float fDohvatiKolicinuAmp() const { return pKolicinaAmp; }
 	int fDohvatiDoz() const { return pDoziranje; }
 	int fKupovina(int pDana);
-	~iInjekcije() {}
+	~iInjekcije() {};
 };
