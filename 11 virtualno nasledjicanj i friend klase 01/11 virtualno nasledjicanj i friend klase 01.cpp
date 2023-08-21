@@ -247,22 +247,26 @@ int main() {
 		}
 
 		case 3: {
-			double ukupnoPlaceno = 0.0;
-			double ukupnoNeplaceno = 0.0;
+			if (kupljenaPica.empty()) {
+				cout << "\nNema unetih kupljenih pica.\n";
+			} else {
+				double ukupnoPlaceno = 0.0;
+				double ukupnoNeplaceno = 0.0;
 
-			for (const Pica* pica : kupljenaPica) {
-				if (pica->getPlaceno()==1) {
-					ukupnoPlaceno += pica->izracunavanjeCene();
-				} else {
-					ukupnoNeplaceno += pica->izracunavanjeCene();
+				for (const Pica* pica : kupljenaPica) {
+					if (pica->getPlaceno()==1) {
+						ukupnoPlaceno += pica->izracunavanjeCene();
+					} else {
+						ukupnoNeplaceno += pica->izracunavanjeCene();
+					}
 				}
+
+				double ukupnoStanje = ukupnoPlaceno + ukupnoNeplaceno;
+
+				cout << "\nUkupno placeno: " << ukupnoPlaceno << " dinara\n";
+				cout << "Ukupno neplaceno: " << ukupnoNeplaceno << " dinara\n";
+				cout << "Ukupno stanje na skladistu: " << ukupnoStanje << " dinara\n";
 			}
-
-			double ukupnoStanje = ukupnoPlaceno + ukupnoNeplaceno;
-
-			cout << "\nUkupno placeno: " << ukupnoPlaceno << " dinara\n";
-			cout << "Ukupno neplaceno: " << ukupnoNeplaceno << " dinara\n";
-			cout << "Ukupno stanje na skladistu: " << ukupnoStanje << " dinara\n";
 
 			break;
 		}
@@ -273,10 +277,9 @@ int main() {
 			}
 			else {
 				cout << "\nLista kupljenih pica:\n";
-				cout << "Sifra\tKolicina\tCena\n";
+				cout << "Sifra\tKol.\tCena\n";
 				for (const Pica* pica : kupljenaPica) {
-					double cena = pica->izracunavanjeCene();
-					cout << pica->getSifra() << "\t" << pica->getKolicina() << "\t" << cena << endl;
+					cout << pica->getSifra() << "\t" << pica->getKolicina() << "\t" << pica->izracunavanjeCene() << endl;
 				}
 			}
 			break;
