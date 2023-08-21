@@ -196,17 +196,17 @@ int main() {
 		switch (izbor) {
 
 		case 1: {
-			int typeChoice;
+			int podIzbor;
 			cout << "\nIzaberite vrstu pica:\n";
 			cout << "1. Zestoko pice\n";
 			cout << "2. Pice u flasici\n";
 			cout << "3. Pice u rinfuzi\n";
 			cout << "Vas izbor: ";
-			cin >> typeChoice;
+			cin >> podIzbor;
 
 			Pica* novoPice = nullptr;
 
-			switch (typeChoice) {
+			switch (podIzbor) {
 				case 1: {
 					novoPice = new ZestokaPica("", "", "", 0, 0, 0.0, 0, 0, 0.0, 0, 0, 0, "", 0.0);
 					break;

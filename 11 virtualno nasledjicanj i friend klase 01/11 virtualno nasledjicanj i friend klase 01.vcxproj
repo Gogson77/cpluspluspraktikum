@@ -24,6 +24,7 @@
     <ProjectGuid>{63a01c28-8249-4ebf-85a1-39bdccd45c78}</ProjectGuid>
     <RootNamespace>My11virtualnonasledjicanjifriendklase01</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>11 virtualno nasledjivanje i friend klase 01</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
